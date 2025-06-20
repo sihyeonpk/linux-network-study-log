@@ -5,5 +5,5 @@
 🎓 과정: 네트워크관리사, 리눅스마스터 2급, CCNA, 대비 과정
 
 📁 학습 정리:
-- [Network](./network-study.md)
-- [Linux](./linux-study.md)
+- [Network](./network/index.md)
+- [Linux](./linux/index.md)
