@@ -8,20 +8,28 @@
 
 -예시
 • Ethernet | IP | TCP | HTTP ----------------------------->PC 
+
   헤더      헤더  헤더 헤더
+  
   14         20     20          (바이트)
 
   -인캡슐레이션 순서) tcp->IP->Ethernet
 
   -PC가 주소를 받았을 때)
+  
   Ethernet헤더의 목적지(Dst) 주소 확인 후 맞으면 디캡슐레이션->IP헤더의 목적지 주소 확인 후 맞으면 디캡슐레이션->
+  
   TCP헤더의 목적지 주소 확인 후 맞으면 디캡슐레이션->HTTP의 데이터 확인 가능 
+  
   만약 목적지 주소가 틀리면 바로 버림
 
   
 • Ethernet | IP | TCP | HTTP ----------------------------->네트워크 전송 장비
+
   헤더      헤더  헤더 헤더
+  
   14         20     20          (바이트)
+
   
  -네트워크 전송 장비가 주소를 받았을 때)
  목적지 주소를 보고 알맞게 가도록 내보냄 (스위치:Ethernet헤더만 확인, 라우터:IP헤더까지 확인)
@@ -31,16 +39,27 @@
 -예시
 
  98    Ethernet | IP | tcp | http
+ 
          14      20    20
+         
 2081 Ethernet | IP | tcp | Telnet
+
          14     20   20
+         
 363  Ethernet | IP | tcp | ssl
+
            14   20   20
+           
 55  Ethernet | IP | UDP | dns
+
      14         20   8    31
+     
 1359 Ethernet | IP | icmp
+
         14      20   40
+        
 9 Ethernet | arp
+
      32(padding:뭔가를 채우는 것 18바이트 때문, padding이 없다면 14바이트)
 
 
